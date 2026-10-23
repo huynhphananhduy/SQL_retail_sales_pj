@@ -47,15 +47,10 @@ or total_sale is null
 
 -- ----- --
 delete from retail_sales
-where transactions_id is null
-or sale_date is null
-or customer_id is null
-or gender is null
-or category is null
-or quantity is null
-or price_per_unit is null
-or cogs is null
-or total_sale is null
+where quantity is null
+and price_per_unit is null
+and cogs is null
+and total_sale is null 
 
 -- how many sales records do we have left ?
 select count(*) total_sales
